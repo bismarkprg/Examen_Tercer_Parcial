@@ -1,0 +1,83 @@
+{
+  "info": {
+    "name": "API Parcial Express",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Colección para probar los endpoints del examen: GET /estado, POST /datos, PUT /datos/:id"
+  },
+  "item": [
+    {
+      "name": "GET Estado",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/estado",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "estado"
+          ]
+        }
+      }
+    },
+    {
+      "name": "POST Datos",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Bismark\",\n  \"email\": \"bismark.mariaca@gmail.com\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/datos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "datos"
+          ]
+        }
+      }
+    },
+    {
+      "name": "PUT Datos por ID",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Bismark Actualizado\",\n  \"email\": \"bismark.actualizado@gmail.com\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/datos/:id",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "datos",
+            ":id"
+          ]
+        },
+        "description": "Reemplaza :id con el ID devuelto por POST /datos"
+      }
+    }
+  ]
+}
