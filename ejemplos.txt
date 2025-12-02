@@ -1,0 +1,15 @@
+Ejemplo POST /datos
+
+
+{
+  "nombre": "Maria",
+  "correo": "maria@tercer-parcial.com",
+  "edad": 25
+}
+
+Ejemplo PUT /datos/:id
+
+{
+  "nombre": "Maria Actualizada",
+  "correo": "maria@tercer-parcial.com"
+}
